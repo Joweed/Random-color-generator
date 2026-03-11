@@ -1,2 +1,2 @@
 # Random color generator
-Fast random colors generator that it can copy to clipboard
+Fast random colors generator with copy-to-clipboard
