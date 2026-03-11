@@ -24,18 +24,18 @@ document.querySelector('#button').addEventListener('click', function() {
 });
 
 // Botão "Aplicar" (assumindo id="aplicar")
-document.querySelector('#aplicar').addEventListener('click', function() {
-    if (corAtual) {
-        document.body.style.backgroundColor = corAtual;
-        console.log('Cor aplicada:', corAtual);
-        this.disabled = true;  // Desabilita o botão Aplicar
-        document.querySelector('#button').disabled = true;  // Desabilita o botão Gerar
-        document.querySelector('#reset').style.display = 'block';
-    } else {
-        alert("Gere uma cor primeiro!");
-        console.log('Gere uma cor primeiro!');
-    }
-});
+// document.querySelector('#aplicar').addEventListener('click', function() {
+//     if (corAtual) {
+//         document.body.style.backgroundColor = corAtual;
+//         console.log('Cor aplicada:', corAtual);
+//         this.disabled = true;  // Desabilita o botão Aplicar
+//         document.querySelector('#button').disabled = true;  // Desabilita o botão Gerar
+//         document.querySelector('#reset').style.display = 'block';
+//     } else {
+//         alert("Gere uma cor primeiro!");
+//         console.log('Gere uma cor primeiro!');
+//     }
+// });
 
 // Botão "Reset"
 document.querySelector('#reset').addEventListener('click', function() {
