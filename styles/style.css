@@ -5,12 +5,20 @@
     background-color: #ccc;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+    overflow: hidden;
+}
+
 .mainContainer{
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
 }
 
 button{
@@ -23,4 +31,29 @@ button{
 
 #reset{
     margin-top: 10px;
+}
+
+#preview{
+cursor: url("/styles/eyedropper.png") 16 16, pointer;
+}
+
+#listaCores {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    /* border: solid 1px; */
+    width: 150px;
+    height: 150px;
+    padding: 0;
+    list-style: none;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+#listaCores li {
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    height: 100%;
+    border: 1px solid;
+    cursor: url("/styles/eyedropper.png") 16 16, pointer;
 }

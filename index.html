@@ -7,15 +7,34 @@
     <title>RANDOM COLOR GENERATOR</title>
 </head>
 <body>
+    
     <div class="mainContainer">
         <button id="button">Gerar</button>
         <!-- <button id="aplicar">Aplicar</button> -->
         <button id="copiar" style="display: none;">Copiar</button>
         <p id="corCopiada" style="color: red; font-weight: bold;">Cor copiada!</p>
-        <div id="preview" style="width: 100px; height: 100px; border: 1px solid black; margin-top: 10px; border-radius: 50px;"></div>
+        <div id="preview" style="width: 200px; height: 200px; border: 2px solid black; margin-top: 10px; border-radius: 100px;"></div>
         <button id="reset" style="display:none;">Gerar outra cor</button>
     </div>
-    <!-- site referencia:https://www.color-hex.com/ -->
+    
+    <div id="containerHistorico">
+            <ul id="listaCores">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+    </div>
+    
+
+    <footer>
+        <p>Inspirado em </p><a href="https://www.color-hex.com/">color-hex.com</a>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
