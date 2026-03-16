@@ -2,15 +2,25 @@
     margin: 0;
     padding:0;
     box-sizing: border-box;
-    background-color: #ccc;
 }
 
 body {
+    font-family: 'Arimo', sans-serif;
+}
+
+
+
+.headerContainer {
+    background-color: #a1a1c1;
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    align-items: center;
-    overflow: hidden;
+    justify-content: center;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.headerContainer h1 {
+    font-family: 'Honk', cursive;
 }
 
 .mainContainer{
@@ -21,12 +31,16 @@ body {
     justify-content: center;
 }
 
-button{
+#button{
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 25px;
     cursor: pointer;
     border-radius: 10px;
     margin-bottom: 10px;
+    font-family: 'Honk', sans-serif;
+    background-color: #a1a1c1;
+
+
 }
 
 #reset{
@@ -35,6 +49,13 @@ button{
 
 #preview{
 cursor: url("/styles/eyedropper.png") 16 16, pointer;
+}
+
+#containerHistorico{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
 }
 
 #listaCores {
@@ -55,5 +76,6 @@ cursor: url("/styles/eyedropper.png") 16 16, pointer;
     width: 100%;
     height: 100%;
     border: 1px solid;
+    border-radius: 10px 0;
     cursor: url("/styles/eyedropper.png") 16 16, pointer;
 }
