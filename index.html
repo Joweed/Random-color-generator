@@ -20,11 +20,15 @@
         </div>
     </header>
     <div class="mainContainer">
-        <button id="button">Gerar</button>
+        <button id="button">GERAR!</button>
         <!-- <button id="aplicar">Aplicar</button> -->
         <button id="copiar" style="display: none;">Copiar</button>
         <p id="corCopiada" style="color: red; font-weight: bold;">Cor copiada!</p>
-        <div id="preview" style="width: 200px; height: 200px; border: 2px solid black; margin-top: 10px; border-radius: 100px;"></div>
+        <div class="previewColor">
+            <div id="preview" style="width: 150px; height: 150px; border: 2px solid black; margin-top: 10px; border-radius: 100px;">
+            </div>
+            <input type="range" id="brightness" min="0" max="100" value="50">
+        </div>
         <button id="reset" style="display:none;">Gerar outra cor</button>
     </div>
     

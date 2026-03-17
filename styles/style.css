@@ -1,3 +1,9 @@
+:root {
+    --headerColor: #a1a1c1;
+    --bodyColor: #c7c7d6;
+}
+
+
 *{
     margin: 0;
     padding:0;
@@ -6,21 +12,27 @@
 
 body {
     font-family: 'Arimo', sans-serif;
+    background-color: var(--bodyColor)
 }
 
 
 
 .headerContainer {
-    background-color: #a1a1c1;
+    background-color: var(--headerColor);
     width: 100%;
     display: flex;
     justify-content: center;
-    padding: 10px;
-    margin-bottom: 10px;
+    font-size: 20px;
+    padding: 20px;
+    margin-bottom: 40px;
 }
 
 .headerContainer h1 {
     font-family: 'Honk', cursive;
+    cursor: default;
+    display: flex;
+    justify-content: space-between;
+    letter-spacing: 8px;
 }
 
 .mainContainer{
@@ -29,18 +41,23 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    
 }
 
 #button{
     padding: 10px 20px;
-    font-size: 25px;
+    font-size: 27px;
     cursor: pointer;
     border-radius: 10px;
     margin-bottom: 10px;
     font-family: 'Honk', sans-serif;
-    background-color: #a1a1c1;
+    background-color: var(--headerColor);
+}
 
-
+#button:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+    background-color: #d2d2de;
 }
 
 #reset{
@@ -48,7 +65,29 @@ body {
 }
 
 #preview{
-cursor: url("/styles/eyedropper.png") 16 16, pointer;
+    cursor: pointer;
+}
+
+#brightness {
+    width: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+#brightness::-webkit-slider-runnable-track {
+    background: #a1a1c1;
+    height: 8px;
+    border-radius: 10px;
+}
+
+#brightness::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background: black;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: -5px; /* alinha com a barra */
 }
 
 #containerHistorico{
@@ -62,13 +101,16 @@ cursor: url("/styles/eyedropper.png") 16 16, pointer;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    /* border: solid 1px; */
     width: 150px;
     height: 150px;
     padding: 0;
     list-style: none;
     gap: 5px;
     margin-bottom: 10px;
+}
+#listaCores li:hover {
+    transform: scale(1.1);
+    transition: 0.3s ;
 }
 
 #listaCores li {
@@ -77,5 +119,5 @@ cursor: url("/styles/eyedropper.png") 16 16, pointer;
     height: 100%;
     border: 1px solid;
     border-radius: 10px 0;
-    cursor: url("/styles/eyedropper.png") 16 16, pointer;
+    cursor: pointer;
 }
