@@ -1,5 +1,9 @@
 # 🎨 Random Color Generator
 
+ANTES | ESTADO ATUAL DO APP
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/ea2f3d4e-9084-4ee0-8065-0e0bdb7166d3" />
+
+
 Um gerador de cores aleatórias simples e interativo feito com **HTML, CSS e JavaScript puro**.  
 A ferramenta permite gerar cores aleatórias, visualizar a cor em tempo real, copiar o código hexadecimal e manter um histórico das últimas cores geradas.
 
