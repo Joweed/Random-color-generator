@@ -121,3 +121,28 @@ body {
     border-radius: 10px 0;
     cursor: pointer;
 }
+
+#imgContainer {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+#containerTexto {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+
+}
+#containerTexto:hover {
+    opacity: 1;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#variacoesBtn {
+    margin-left: 40px;
+    margin-top: 10px;
+    cursor: pointer;
+}

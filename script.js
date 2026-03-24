@@ -18,6 +18,10 @@ const msgCopiada = document.querySelector('#corCopiada');
 const preview = document.querySelector('#preview');
 const btnGerar = document.querySelector('#button');
 const btnReset = document.querySelector('#reset');
+const containerTexto = document.getElementById("containerTexto");
+const btnVariacao = document.querySelector ('#variacoesBtn');
+const cores = document.querySelectorAll('.cor')
+const corBase = localStorage.getItem('corSelecionada');
 
 if (btnCopiar) btnCopiar.style.display = 'none';
 if (msgCopiada) msgCopiada.style.display = 'none';
@@ -39,13 +43,16 @@ function atualizarHistorico(){
 
         if(historicoCores[index]){
 
-            li.style.backgroundColor = historicoCores[index];
+            li.style.background = historicoCores[index];
 
-            li.onclick = () =>{
+            li.onclick = () => {
 
-                navigator.clipboard.writeText(historicoCores[index]);
-                mostrarMensagem(historicoCores[index]);
+                // 🔁 volta a cor pro preview
+                corAtual = historicoCores[index];
+                preview.style.background = corAtual;
 
+                // opcional: esconder mensagem
+                msgCopiada.style.display = 'none';
             };
 
         }else{
@@ -66,7 +73,7 @@ btnGerar.addEventListener('click',function(){
 
     console.log('Cor gerada:',corAtual);
 
-    preview.style.backgroundColor = corAtual;
+    preview.style.background = corAtual;
 
     historicoCores.unshift(corAtual);
 
@@ -113,10 +120,22 @@ btnReset.addEventListener('click',function(){
 
     corAtual = null;
 
-    preview.style.backgroundColor = '';
+    preview.style.background = '';
 
-    document.body.style.backgroundColor = 'white';
+    document.body.style.background = 'white';
 
     msgCopiada.style.display = 'none';
+
+});
+
+btnVariacao.addEventListener('click', function(){
+
+    if (!corAtual) {
+        alert("Gere uma cor primeiro!");
+        return;
+    }
+
+    localStorage.setItem('corSelecionada', corAtual);
+    window.location.href = 'palette.html';
 
 });
